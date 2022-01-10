@@ -8,10 +8,23 @@
     <h1>Survey</h1>
     <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
         <fieldset>
-            <legend>Your Information</legend>
+            <legend><strong>Your Information</strong></legend>
+            
+            <figcaption><em>First Name</em></figcaption>
+            <input type="text" name="firstName" placeholder="Your firstname here"/>
+            <br>
+            <figcaption><em>Last Name</em></figcaption>
+            <input type="text" name="lastName" placeholder="Your lastname here"/>
+            <figcaption><em>Email:</em></figcaption>
+            <input type="email" name="email" placeholder="Your email here"
+                
         </fieldset>
         <fieldset>
             <legend>Survey Questions</legend>
+            <div>
+                Favorite Sport:
+                <input type="radio" name="sport"
+            </div>
 
         </fieldset>
     </form>
