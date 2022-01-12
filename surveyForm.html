@@ -3,10 +3,25 @@
 <head>
     <meta charset="utf-8"/>
     <title>Survey Form</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .survey-form {
+            width: 80%;
+            margin: auto;
+        }
+
+        #submit-btn {
+            background: green; 
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Survey</h1>
-    <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+    <form class="survey-form" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
         <fieldset>
             <legend><strong>Your Information</strong></legend>
             
@@ -40,7 +55,7 @@
             </div>
             
         </fieldset>
-        <input type="submit" style="background: green; color: white;">
+        <input id="submit-btn" type="submit"/>
 
     </form>
 </body>
