@@ -6,15 +6,42 @@ body {
 h1 {
     color: blueviolet;
     font: 32px Garamond, Helvetica, serif;
+    display: flex;
+    justify-content: center;
+}
+.center-position {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+section {
+    border-style: groove;
+    border-color: orangered;
+    width: 95%
 }
 
 table {
-    width: 50%;
+    width: 90%;
 }
+
 
 thead {
     text-align: left;
 }
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+th {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 label {
     display: block;
