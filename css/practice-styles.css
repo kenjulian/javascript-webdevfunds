@@ -4,8 +4,8 @@ body {
 }
 
 h1 {
-    color: blueviolet;
-    font: 32px Garamond, Helvetica, serif;
+    color: brown;
+    font-family: 'Neonderthaw', cursive;
     display: flex;
     justify-content: center;
 }
@@ -14,11 +14,27 @@ h1 {
     justify-content: center;
 }
 
+form {
+    display: flex;
+
+    justify-content:center;
+}
+
+.margin-right {
+    margin-right: 30px;
+}
+
+.margin-left {
+    margin-left: 30px;
+}
+
+
+
 
 
 section {
     border-style: groove;
-    border-color: orangered;
+    border-color: brown;
     width: 95%
 }
 
@@ -36,12 +52,6 @@ tr {
     justify-content: space-between;
 }
 
-th {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 
 label {
     display: block;
@@ -49,4 +59,6 @@ label {
 
 #submit-btn {
     display: block;
+    margin: auto;
+    margin-top: 20px;
 }
