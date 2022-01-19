@@ -34,7 +34,8 @@
         }
 
         function applyMatineeDiscount(cost, isMatinee) {
-            if ((isMatinee === 'yes') || (isMatinee ==='y')) {
+            let thisMatinee = isMatinee.toLowerCase();//this method doesnt change the original string
+            if ((thisMatinee === 'yes') || (thisMatinee ==='y')) {
                 return cost - MATINEE_DISCOUNT;
             }
                 return cost;
