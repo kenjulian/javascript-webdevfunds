@@ -33,12 +33,30 @@
 
         }
 
+        function getBaseTicketCost(age) {
+            if ((age <= 12) || (age >= 65)) {
+               return CHILD_AND_SENIOR_TICKET_COST;
+    
+            }
+               return GENERAL_ADMISSION_TICKET_COST;
+
+        }
+
         function applyMatineeDiscount(cost, isMatinee) {
             let thisMatinee = isMatinee.toLowerCase();//this method doesnt change the original string
             if ((thisMatinee === 'yes') || (thisMatinee ==='y')) {
                 return cost - MATINEE_DISCOUNT;
             }
                 return cost;
+
+        }
+
+        function getBaseTicketCost(age) {
+            if ((age <= 12) || (age >= 65)) {
+               return CHILD_AND_SENIOR_TICKET_COST;
+    
+            }
+               return GENERAL_ADMISSION_TICKET_COST;
 
         }
     </script>
