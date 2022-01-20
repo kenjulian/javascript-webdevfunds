@@ -2,6 +2,7 @@ function runGame() {
     let guessString = "";
     let guessNumber = 0;
     let correct = false;
+    let numTries = 0;
 
     const randomNumber = Math.random() * 100; //creates random non integer b/q 0-99.99...
     const randomInteger = Math.floor(randomNumber);
@@ -9,11 +10,17 @@ function runGame() {
    
     do {
         guessString = prompt("I am thinking of a number in the range 1 to 100.\n\nWhat is the number?")//\n means new line
-        guessNumber = +guessString; //+ prefix turns string to a number
-        correct = checkguess(guessNumber, target);//return false if no match; true if match
-    } while (!correct);//will loop as long as its not true
 
-}
+        if (guessString === null) {
+            return;
+        }
+        
+        guessNumber = +guessString; //+ prefix turns string to a number
+        numTries++;
+        correct = checkGuess(guessNumber, target);//return false if no match; true if match
+    } while (!correct)//will loop as long as its not true
+        alert("You got it! The number was " + target + ".\n\nIt took you " + numTries + " tries to guess correctly.");
+};
 
 function checkGuess(guessNumber, target) {
     let correct = false;
@@ -35,4 +42,4 @@ function checkGuess(guessNumber, target) {
     }
 
     return correct;//this value goes back to the runGame function where checkGuess was called
-}
+};
