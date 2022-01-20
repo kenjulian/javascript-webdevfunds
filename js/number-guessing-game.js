@@ -11,5 +11,28 @@ function runGame() {
         guessString = prompt("I am thinking of a number in the range 1 to 100.\n\nWhat is the number?")//\n means new line
         guessNumber = +guessString; //+ prefix turns string to a number
         correct = checkguess(guessNumber, target);//return false if no match; true if match
-    } while (!correct);
+    } while (!correct);//will loop as long as its not true
+
+}
+
+function checkGuess(guessNumber, target) {
+    let correct = false;
+
+    if (isNaN(guessNumber)) {
+        alert("You have not entered a number.\n\nPlease enter a number in the 1-100 range.");
+
+    } else if ((guessNumber < 1) || (guessNumber > 100)) {
+        alert("Please enter an integer in the 1-100 range.");
+
+    } else if (guessNumber > target) {
+        alert("Your Number is too large!")
+
+    } else if (guessNumber < target) {
+        alert("Your number is too small!");
+
+    } else {
+        correct = true; //only block that will reassign correct variable to true
+    }
+
+    return correct;//this value goes back to the runGame function where checkGuess was called
 }
