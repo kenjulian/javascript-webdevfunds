@@ -11,8 +11,8 @@ function rollDice() {
         if (roll < 5) {
             continue;//skips loop
         }
-        alert("Congratulations, you win " + roll + " gold coins!");
         goldCoins += roll;
+        alert("Congratulations, you win " + roll + " gold coins!\n\nTotal coins: " + goldCoins);
 
     }
     alert("You have won a total of " + goldCoins + " gold coins!")
