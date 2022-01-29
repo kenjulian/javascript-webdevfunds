@@ -1,14 +1,16 @@
 function showPattern() {
     const colorsArr = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    // const colorsArr = ['red', 'orange'];
     
     let topPosition = 25;
     let leftPosition = 25;
     let width = 500;
     let height = 500;
 
-    while (width > 50) {
+     while (width > 50) {
         const randomColorIdx = Math.floor(Math.random() * colorsArr.length);
         const newDiv = document.createElement("div");
+        newDiv.style.borderRadius = "50%";
 
         newDiv.style.top = topPosition + 'px';
         newDiv.style.left = leftPosition + 'px';
@@ -24,5 +26,5 @@ function showPattern() {
 
         //a smaller and nested square should appear in every loop
 
-    }
+     }
 }
